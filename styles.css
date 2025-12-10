@@ -1,0 +1,315 @@
+/* General Reset - removing default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, nav to right */
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points */
+}
+
+nav ul li {
+    display: inline; /* Makes list items sit next to each other */
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff9900; /* Changes color when you mouse over */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #556677;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounds the corners slightly */
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+/* About Section Styles */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.about h3 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.features {
+    display: flex; /* Makes the boxes sit side by side */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows boxes to stack on small screens */
+}
+
+.feature-box {
+    background-color: #eee;
+    padding: 20px;
+    width: 30%;
+    border: 1px solid #ccc;
+    min-width: 250px;
+}
+
+.feature-box h4 {
+    margin-bottom: 10px;
+    color: #556677;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* --- Course Page Styles --- */
+
+.course-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.course-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course-section > p {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on small screens */
+    gap: 30px; /* Space between the cards */
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Slightly rounder corners than the feature box */
+    width: 300px; /* Fixed width for uniform look */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    text-align: left; /* Text inside card looks better aligned left */
+}
+
+.course-card h3 {
+    color: #556677;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff9900; /* Little orange line under title */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.course-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    height: 60px; /* Keeps all cards same height even if text length differs */
+}
+
+.course-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%; /* Button stretches across the card */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.course-btn:hover {
+    background-color: #555;
+}
+
+/* --- Testimonial Page Styles --- */
+
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff8f0; /* A very light orange/cream background to make it distinct */
+}
+
+.testimonials-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px; /* Very round corners look friendlier */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative; /* Needed to place the quote symbol correctly */
+    text-align: center;
+}
+
+.quote-symbol {
+    font-size: 60px;
+    color: #ff9900;
+    font-family: Georgia, serif; /* Different font for the quote mark */
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.review-text {
+    font-style: italic; /* Makes the review text slanted */
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.student-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.student-course {
+    font-size: 14px;
+    color: #888;
+}
+
+/* --- Course Content Page (Sarcastic) --- */
+
+.course-hero {
+    background-color: #333;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.course-hero h1 {
+    font-size: 48px;
+    color: #ff9900;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #ccc;
+}
+
+.warning-box {
+    background-color: #ff4444; /* Bright red warning */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block; /* Makes box only as wide as text */
+    margin-top: 10px;
+    border: 2px solid white;
+}
+
+.curriculum {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Centers the section in the middle of screen */
+}
+
+.curriculum h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.module {
+    background-color: white;
+    border-left: 5px solid #ff9900; /* Orange stripe on the left */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.module h3 {
+    margin-bottom: 5px;
+}
+
+.module p {
+    color: #666;
+}
+
+.instructor-bio {
+    background-color: #eee;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.join-btn {
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #ff4444; /* Red button for danger */
+}
+
+.join-btn:hover {
+    background-color: #cc0000;
+}
