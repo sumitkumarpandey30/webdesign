@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Join the Paddock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="racing-theme">
+
+    <header>
+        <div class="logo">
+            <h1>LearnEasy <span>LN4</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="signup-section">
+        <div class="signup-card">
+            <h2>New Student Registration</h2>
+            <p>Claim your seat.</p>
+
+            <form id="signupForm">
+                
+                <div class="form-group">
+                    <label for="name">Student Name:</label>
+                    <input type="text" id="name" placeholder="Lando Norris">
+                    <span id="nameError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="racer@example.com">
+                    <span id="emailError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Create a password">
+                    <span id="passwordError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm password">
+                    <span id="confirmPasswordError" class="error"></span>
+                </div>
+
+                <button type="button" class="signup-btn" onclick="validateSignup()">Full Send (Register)</button>
+
+                <div class="switch-link">
+                    Already have a seat? <a href="login.html">Login to Paddock</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LearnEasy. Moving up and down, side to side.</p>
+    </footer>
+
+    <script>
+        function validateSignup() {
+            document.querySelectorAll('.error').forEach(e => e.textContent = "");
+            
+            let isValid = true;
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            }
+
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Invalid email.";
+                isValid = false;
+            }
+
+            const password = document.getElementById("password").value.trim();
+            if (password === "") {
+                document.getElementById("passwordError").textContent = "Password is required.";
+                isValid = false;
+            } else if (password.length < 8) {
+                document.getElementById("passwordError").textContent = "Must be 8+ characters.";
+                isValid = false;
+            }
+
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+            if (confirmPassword === "") {
+                document.getElementById("confirmPasswordError").textContent = "Confirm password.";
+                isValid = false;
+            } else if (confirmPassword !== password) {
+                document.getElementById("confirmPasswordError").textContent = "Passwords do not match.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Account Created! Box Box, Box Box.");
+                window.location.href = "login.html"; 
+            }
+        }
+    </script>
+
+</body>
+</html>

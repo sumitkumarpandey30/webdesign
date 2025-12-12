@@ -430,3 +430,658 @@ footer {
     border: none;
     margin-top: 10px;
 }
+
+/* =========================================
+   Lando Norris / Racing Theme Additions
+   (Only affects pages with <body class="racing-theme">)
+   ========================================= */
+
+/* Dark Background for Racing Pages */
+body.racing-theme {
+    background-color: #1a1a1a; /* Dark Asphalt */
+    color: white;
+}
+
+/* Header Adjustments for Dark Theme */
+body.racing-theme header {
+    background-color: #000;
+    border-bottom: 3px solid #ff8000; /* Papaya line */
+}
+
+body.racing-theme .logo h1 {
+    color: white;
+}
+
+body.racing-theme .logo span {
+    color: #ccff00; /* Neon Yellow Accent */
+}
+
+/* Racing Login/Signup Section */
+body.racing-theme .login-section, 
+body.racing-theme .signup-section {
+    background-color: #1a1a1a; /* Matches body */
+    min-height: 80vh; /* Centers vertically */
+}
+
+/* The Card Styling */
+body.racing-theme .login-card, 
+body.racing-theme .signup-card {
+    background-color: #2d2d2d; /* Dark Grey Card */
+    border-top: 5px solid #ff8000; /* Papaya Top */
+    border-bottom: 5px solid #ccff00; /* Neon Bottom */
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 128, 0, 0.2);
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Headings and Text */
+body.racing-theme h2 {
+    color: #ff8000;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+}
+
+body.racing-theme label {
+    color: #ccff00; /* Neon Labels */
+    font-weight: bold; 
+}
+
+body.racing-theme p {
+    color: #bbb;
+}
+
+/* Input Fields */
+body.racing-theme input {
+    background-color: #444;
+    border: 1px solid #555;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+body.racing-theme input:focus {
+    outline: none;
+    border-color: #ccff00;
+}
+
+/* Buttons */
+body.racing-theme .login-btn,
+body.racing-theme .signup-btn {
+    background-color: #ff8000;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+body.racing-theme .login-btn:hover,
+body.racing-theme .signup-btn:hover {
+    background-color: #ccff00;
+    box-shadow: 0 0 15px #ccff00;
+}
+
+/* Links and Errors */
+body.racing-theme .switch-link {
+    text-align: center;
+    margin-top: 15px;
+    display: block;
+    color: #bbb;
+}
+
+body.racing-theme .switch-link a {
+    color: #ff8000;
+    font-weight: bold;
+}
+
+body.racing-theme .error {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* =========================================
+   STRANGER THINGS THEME (The Upside Down)
+   ========================================= */
+
+/* Import Google Fonts for the theme */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* The Void Background */
+body.stranger-theme {
+    background-color: #050505; /* Almost black */
+    color: #c0c0c0;
+    font-family: 'Roboto Mono', monospace; /* Tech/Lab feel */
+}
+
+/* Header with Red Glow */
+body.stranger-theme header {
+    background-color: #000;
+    border-bottom: 2px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+body.stranger-theme .logo h1 {
+    font-family: 'Creepster', cursive; /* The Scary Font */
+    font-size: 2.5rem;
+    color: #ff0000;
+    text-shadow: 
+        0 0 5px #ff0000, 
+        0 0 10px #8b0000;
+    letter-spacing: 2px;
+}
+
+/* Hero Section */
+body.stranger-theme .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 80vh;
+    background: radial-gradient(circle at center, #1a0505 0%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Particles Effect (The Spores) */
+body.stranger-theme .hero-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#ff0000 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    animation: floating 10s infinite linear;
+    z-index: 0;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50px); }
+}
+
+body.stranger-theme .hero-text {
+    flex: 1;
+    z-index: 1; /* Puts text above the particles */
+    padding-right: 50px;
+}
+
+body.stranger-theme .hero-text h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px 0px #ff0000;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+body.stranger-theme .hero-text p {
+    color: #ffcccc;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    border-left: 3px solid #ff0000;
+    padding-left: 15px;
+}
+
+body.stranger-theme .hero-image {
+    flex: 1;
+    text-align: right;
+    z-index: 1;
+}
+
+body.stranger-theme .hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+    filter: sepia(0.3) contrast(1.2); /* Vintage filter */
+}
+
+/* Features Section (The Lab) */
+body.stranger-theme .about {
+    background-color: #0a0a0a;
+    border-top: 1px solid #333;
+    padding: 60px 10%;
+}
+
+body.stranger-theme .about h3 {
+    font-family: 'Creepster', cursive;
+    color: #ff0000;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+body.stranger-theme .feature-box {
+    background: #111;
+    border: 1px solid #333;
+    color: #ddd;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+body.stranger-theme .feature-box:hover {
+    border-color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+body.stranger-theme .feature-icon {
+    background: #220000;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+/* Buttons */
+body.stranger-theme .main-btn {
+    background-color: transparent;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+    box-shadow: inset 0 0 10px rgba(255,0,0,0.2);
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+body.stranger-theme .main-btn:hover {
+    background-color: #ff0000;
+    color: black;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body.stranger-theme .hero-section {
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+    }
+}
+
+/* =========================================
+   OPPENHEIMER THEME (The Manhattan Project)
+   ========================================= */
+
+/* The Base (Black & White Film Grain Vibe) */
+body.oppenheimer-theme {
+    background-color: #121212; /* Deep Black */
+    color: #e0e0e0; /* Off-white paper text */
+    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+    letter-spacing: -0.5px;
+}
+
+/* Header - Stark and Utilitarian */
+body.oppenheimer-theme header {
+    background-color: #000;
+    border-bottom: 1px solid #d4af37; /* Fission Gold Line */
+    padding: 25px;
+}
+
+body.oppenheimer-theme .logo h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+/* Course Section - The Archives */
+body.oppenheimer-theme .course-section {
+    background-color: #121212;
+    border-top: 1px solid #333;
+    min-height: 80vh;
+}
+
+body.oppenheimer-theme .course-section h2 {
+    text-transform: uppercase;
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #d4af37; /* Gold accent */
+}
+
+body.oppenheimer-theme .course-section > p {
+    color: #888;
+    font-style: italic;
+}
+
+/* The Cards - Confidential Folders */
+body.oppenheimer-theme .course-card {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    border-left: 5px solid #d4af37; /* Folder tab look */
+    border-radius: 2px; /* Sharp corners */
+    box-shadow: none;
+    transition: all 0.3s ease;
+    width: 300px;
+    position: relative;
+    padding-top: 40px; /* Space for the "Top Secret" stamp */
+}
+
+body.oppenheimer-theme .course-card:hover {
+    background-color: #252525;
+    border-color: #d4af37;
+    transform: translateY(-5px);
+}
+
+/* The "Classified" Stamp on cards */
+body.oppenheimer-theme .course-card::before {
+    content: "RESTRICTED";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: #ff3333; /* Red Ink */
+    border: 1px solid #ff3333;
+    padding: 2px 5px;
+    transform: rotate(-5deg);
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+body.oppenheimer-theme .course-card h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #555;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+body.oppenheimer-theme .course-card p {
+    color: #bbb;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* The Button - The Detonator */
+body.oppenheimer-theme .course-btn {
+    background-color: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+body.oppenheimer-theme .course-btn:hover {
+    background-color: #d4af37;
+    color: #000;
+    box-shadow: 0 0 10px #d4af37; /* Glowing radiation effect */
+}
+
+/* =========================================
+   FIGHT CLUB THEME (Project Mayhem) - FIXED
+   ========================================= */
+
+/* 1. The Basement Background */
+body.fight-club-theme {
+    background-color: #1a1a1a !important; /* Force Dark Grey */
+    color: #dcdcdc;
+    font-family: 'Courier New', Courier, monospace; 
+    /* The Hazard Texture */
+    background-image: repeating-linear-gradient(
+        45deg,
+        #1a1a1a,
+        #1a1a1a 10px,
+        #1f1f1f 10px,
+        #1f1f1f 20px
+    );
+    min-height: 100vh; /* Ensures it covers full screen height */
+}
+
+/* 2. FIX: Make the section transparent so the dark body shows */
+body.fight-club-theme .testimonials-section {
+    background-color: transparent !important; /* Overrides the white/cream from original styles */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* 3. Header - Nihilist Style */
+body.fight-club-theme header {
+    background-color: #000;
+    border-bottom: 2px solid #F898C8; /* Soap Pink */
+    padding: 20px;
+}
+
+body.fight-club-theme .logo h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: #F898C8;
+    text-shadow: 2px 2px 0px white;
+}
+
+body.fight-club-theme h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+body.fight-club-theme .testimonials-section > p {
+    color: #F898C8;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    background: black;
+    display: inline-block;
+    padding: 5px 15px;
+    transform: rotate(-1deg);
+}
+
+/* 4. Container Layout */
+body.fight-club-theme .testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* 5. The Card - Dirty Paper Dossier */
+body.fight-club-theme .testimonial-card {
+    background-color: #f4f4f4; /* Paper color */
+    color: #111; /* Ink color */
+    width: 320px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    position: relative;
+    transform: rotate(1deg); 
+    transition: 0.2s;
+    margin-top: 30px;
+    border-radius: 0; /* Sharp corners */
+}
+
+body.fight-club-theme .testimonial-card:hover {
+    transform: scale(1.02) rotate(0deg); 
+    z-index: 10;
+    box-shadow: 0 15px 30px rgba(248, 152, 200, 0.4); /* Pink Glow */
+}
+
+/* 6. The Polaroid Image Area */
+body.fight-club-theme .image-wrapper {
+    background: white;
+    padding: 10px 10px 30px 10px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    transform: rotate(-2deg); 
+    position: relative;
+}
+
+body.fight-club-theme .student-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2); /* Black & White grit */
+    display: block;
+}
+
+/* 7. The Scotch Tape Effect */
+body.fight-club-theme .image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.4); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+/* 8. Text Styling */
+body.fight-club-theme .quote-symbol {
+    display: none; 
+}
+
+body.fight-club-theme .review-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-left: 3px solid #F898C8;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+body.fight-club-theme .student-name {
+    text-transform: uppercase;
+    font-weight: 900;
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 1.1rem;
+}
+
+body.fight-club-theme .student-course {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #666;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   WRITE REVIEW PAGE (Mission Report)
+   ========================================= */
+
+/* Reuse the Fight Club Body Theme */
+body.fight-club-theme .form-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* The Form Paper Look */
+body.fight-club-theme .mission-paper {
+    background-color: #f4f4f4;
+    width: 500px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    transform: rotate(-1deg);
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+/* Paper Clip Effect */
+body.fight-club-theme .mission-paper::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 15px;
+    height: 40px;
+    background: #bbb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+body.fight-club-theme .mission-paper h2 {
+    color: #000;
+    text-align: left;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Form Inputs */
+body.fight-club-theme .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+body.fight-club-theme label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+body.fight-club-theme input, 
+body.fight-club-theme select, 
+body.fight-club-theme textarea {
+    width: 100%;
+    padding: 10px;
+    background: #e8e8e8;
+    border: 1px solid #999;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #000;
+}
+
+body.fight-club-theme input:focus, 
+body.fight-club-theme textarea:focus {
+    outline: none;
+    background: #fff;
+    border-color: #F898C8; /* Soap Pink */
+}
+
+/* Submit Button */
+body.fight-club-theme .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #F898C8; /* Pink Text */
+    border: 2px solid #F898C8;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+body.fight-club-theme .submit-btn:hover {
+    background-color: #F898C8;
+    color: #000;
+    box-shadow: 0 0 15px #F898C8;
+}
+

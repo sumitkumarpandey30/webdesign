@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design - The Visual Album</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific Styles for the Beyoncé Theme */
+        .queen-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            color: #d4af37; /* Metallic Gold */
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        .queen-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .queen-hero .subtitle {
+            font-size: 1.2rem;
+            color: #fff;
+            font-style: italic;
+        }
+
+        .course-image {
+            margin: 30px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Gold Glow */
+            display: block;
+        }
+
+        .tracklist {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .track {
+            background: #fff;
+            border-left: 5px solid #d4af37;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .track:hover {
+            transform: translateX(10px); /* Slide effect */
+        }
+
+        .track h3 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        
+        .join-hive-btn {
+            background-color: #000;
+            color: #d4af37;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #d4af37;
+            transition: all 0.3s;
+        }
+
+        .join-hive-btn:hover {
+            background-color: #d4af37;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>LearnEasy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="testimonials.html">Student Testimonials</a></li>
+                <li><a href="login.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="queen-hero">
+        <h1>Web Designing</h1>
+        <p class="subtitle">"Okay ladies, now let's get in formation (and center those divs)."</p>
+        
+        <img src="images/beyonce.png" alt="Stylish Coding Setup" class="course-image">
+    </section>
+
+    <section class="tracklist">
+        <h2 style="text-align: center; margin-bottom: 30px;">The Curriculum (Tracklist)</h2>
+        
+        <div class="track">
+            <h3>Week 1: The Foundation</h3>
+            <p><strong>I Dream It, I Work Hard.</strong> Mastering the HTML skeleton. We build structure strong enough to hold up the entire internet.</p>
+        </div>
+
+        <div class="track">
+            <h3>Week 2: Pure/Honey (CSS Styling)</h3>
+            <p><strong>It should cost a billion to look this good.</strong> Learn CSS colors, fonts, and box-models. We don't do basic; we do <em>couture</em> coding.</p>
+        </div>
+
+        <div class="track">
+            <h3>Week 3: Flawless Layouts</h3>
+            <p><strong>You wake up, flawless.</strong> Introduction to Flexbox and CSS Grid. Making sure your website looks perfect on mobile, tablet, and desktop.</p>
+        </div>
+
+        <div class="track">
+            <h3>Week 4: JavaScript Energy</h3>
+            <p><strong>Heated.</strong> Adding interactivity to your site. Validating forms and making buttons click like they mean it.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h3>Ready to Run the World?</h3>
+        <p style="margin-bottom: 20px;">Don't just watch the throne, build your own.</p>
+        <a href="#" class="join-hive-btn">Join The Hive</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LearnEasy Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

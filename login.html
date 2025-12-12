@@ -3,65 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - LearnEasy</title>
+    <title>Login - LN4 Edition</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        
-        .error {
-            color: red;
-            font-size: 12px;
-            display: block; 
-            margin-top: 5px;
-            height: 15px; 
-        }
-    </style>
 </head>
-<body>
+<body class="racing-theme">
 
     <header>
         <div class="logo">
-            <h1>LearnEasy</h1>
+            <h1>LearnEasy <span>LN4</span></h1>
         </div>
-     
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="login-section">
         <div class="login-card">
-            <h2>Student Login</h2>
-            <p>Welcome back! Please login to continue.</p>
+            <h2>Login to your Account</h2>
+            <p>Get back on the grid.</p>
 
             <form id="loginForm">
                 
                 <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <label for="email">Team Email:</label>
+                    <input type="email" id="email" name="email" placeholder="lando@mclaren.com">
                     <span id="emailError" class="error"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <label for="password">Telemetry Code (Password):</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••">
                     <span id="passwordError" class="error"></span>
                 </div>
 
-                <button type="button" class="btn login-btn" onclick="validateLogin()">Login</button>
+                <button type="button" class="login-btn" onclick="validateLogin()">Lights Out & Away We Go</button>
+
+                <div class="switch-link">
+                    Rookie driver? <a href="signup.html">Join the Team (Sign Up)</a>
+                </div>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 LearnEasy Project. All rights reserved.</p>
+        <p>&copy; 2025 LearnEasy. No Heroics into Sainte Devote.</p>
     </footer>
 
     <script>
         function validateLogin() {
-            
             document.getElementById("emailError").textContent = "";
             document.getElementById("passwordError").textContent = "";
             
             let isValid = true;
-
-            
             const email = document.getElementById("email").value.trim();
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             
@@ -69,25 +65,22 @@
                 document.getElementById("emailError").textContent = "Email is required.";
                 isValid = false;
             } else if (!emailPattern.test(email)) {
-                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                document.getElementById("emailError").textContent = "Invalid email format.";
                 isValid = false;
             }
 
-           
             const password = document.getElementById("password").value.trim();
             
             if (password === "") {
                 document.getElementById("passwordError").textContent = "Password is required.";
                 isValid = false;
             } else if (password.length < 8) {
-                document.getElementById("passwordError").textContent = "Password must be at least 8 characters.";
+                document.getElementById("passwordError").textContent = "Password too short.";
                 isValid = false;
             }
 
-         
             if (isValid) {
-                alert("Login successful! Redirecting to courses...");
-                
+                alert("Login Successful! It's Friday then... it's Saturday, Sunday, What!");
                 window.location.href = "index.html"; 
             }
         }

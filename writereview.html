@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Report - LearnEasy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fight-club-theme">
+
+    <header>
+        <div class="logo">
+            <h1>LearnEasy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Base</a></li>
+                <li><a href="courses.html">Missions</a></li>
+                <li><a href="testimonials.html">Members</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <div class="mission-paper">
+            <h2>Mission Debrief</h2>
+            <p style="color:#666; font-size: 0.9rem; margin-bottom: 20px;">Fill out the details below. Do not ask questions.</p>
+
+            <form id="reviewForm">
+                
+                <div class="form-group">
+                    <label for="name">Operative Name:</label>
+                    <input type="text" id="name" placeholder="Type your name...">
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Assigned Mission (Course):</label>
+                    <select id="course">
+                        <option value="Web Design">Web Designing</option>
+                        <option value="DSA in R">DSA in R</option>
+                        <option value="DSA in Rust">DSA in Rust</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Performance Rating:</label>
+                    <select id="rating">
+                        <option value="5">★★★★★ (Perfect)</option>
+                        <option value="4">★★★★☆ (Acceptable)</option>
+                        <option value="3">★★★☆☆ (Medicore)</option>
+                        <option value="1">★☆☆☆☆ (Disaster)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="review">Report Details:</label>
+                    <textarea id="review" rows="5" placeholder="Describe your experience..."></textarea>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="submitReview()">File Report</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LearnEasy. In Tyler We Trust.</p>
+    </footer>
+
+    <script>
+        function submitReview() {
+            // 1. Get Values from HTML
+            const name = document.getElementById("name").value.trim();
+            const course = document.getElementById("course").value;
+            const review = document.getElementById("review").value.trim();
+
+            // 2. Simple Validation (Is it empty?)
+            if (name === "" || review === "") {
+                alert("ERROR: Report incomplete. Fill in all fields.");
+                return;
+            }
+
+            // 3. Create a Review Object (Simulation)
+            const newReview = {
+                author: name,
+                course: course,
+                text: review,
+                timestamp: new Date().toLocaleDateString()
+            };
+
+            // 4. Console Log (For Viva demonstration)
+            console.log("Review Submitted:", newReview);
+
+            // 5. Success Message & Redirect
+            alert("Report Accepted, " + name + ". Welcome to Project Mayhem.");
+            
+            // Redirect back to testimonials page
+            window.location.href = "testimonials.html";
+        }
+    </script>
+
+</body>
+</html>
