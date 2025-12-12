@@ -6,13 +6,13 @@
     <title>Login - LearnEasy</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Internal CSS specifically for the error messages */
+        
         .error {
             color: red;
             font-size: 12px;
-            display: block; /* Makes sure error sits on its own line */
+            display: block; 
             margin-top: 5px;
-            height: 15px; /* Keeps space so layout doesn't jump when error appears */
+            height: 15px; 
         }
     </style>
 </head>
@@ -57,18 +57,18 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 LearnEasy Project. All rights reserved.</p>
+        <p>&copy; 2025 LearnEasy Project. All rights reserved.</p>
     </footer>
 
     <script>
         function validateLogin() {
-            // 1. Clear previous error messages
+            
             document.getElementById("emailError").textContent = "";
             document.getElementById("passwordError").textContent = "";
             
             let isValid = true;
 
-            // 2. Email Validation
+            
             const email = document.getElementById("email").value.trim();
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             
@@ -80,21 +80,21 @@
                 isValid = false;
             }
 
-            // 3. Password Validation
+           
             const password = document.getElementById("password").value.trim();
             
             if (password === "") {
                 document.getElementById("passwordError").textContent = "Password is required.";
                 isValid = false;
-            } else if (password.length < 6) {
-                document.getElementById("passwordError").textContent = "Password must be at least 6 characters.";
+            } else if (password.length < 8) {
+                document.getElementById("passwordError").textContent = "Password must be at least 8 characters.";
                 isValid = false;
             }
 
-            // 4. If everything is correct
+         
             if (isValid) {
                 alert("Login successful! Redirecting to courses...");
-                // Redirects the user to the courses page
+                
                 window.location.href = "index.html"; 
             }
         }
